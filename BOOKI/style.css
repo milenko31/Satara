@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+/*toujours mettre en haut*/
+/* j'importe ma selection de police de google font en suivant la fiche synthèse*/
+* {/* l'étoile permet de tout séléctionné on parle de WILDCARD*/
+    box-sizing: border-box;
+    /*box-sizing définit hauteur et largeur totale d'un élément*/
+    /*border-box indique au navigateur de prendre en compte bordure et remplissage 
+    dans la valeur définie pour la largeur et la hauteur*/
+    font-family :"Raleway","sans-serif";/*police Raleway pour toute la page ainsi qu'une font fallback en cas 
+    ou cette police ne marche ou si il y a problème, sans-serif étant la police de dernier recours pour tout site web*/
+}
+
+a{
+
+   color:black;/*couleur noir pour les liens d'hébergements et d'activités*/
+    text-decoration:none;/*j'enlève le surlignage*/
+}
+
+ #logo {/*# pour attribuer un id pour pouvoir modifier les propriétés de l'unique icône*/
+    margin-right: auto;/*margin définit les tailles de marges et right les côtés droit et gauches*/
+    padding: 0 2rem;
+}   /*padding pour écarts de remplissage sur les quatre côtés*/
+    /*le 0 pour aucun changement haut et bas et 2 pour écart vertical*/
+    /*rem pour unités plus flexibles et offrent plus de responsivité et
+    de lisibilités aux applications, 1 rem = 16px etc...*/
+
+nav{
+    display: flex;/*display définit le type d'affichage pour le rendu d'un élément / flex remplit l'espace disponible de son conteneur*/
+    align-items:center;/*aligne l'objet au sein de son conteneur / center pour le centre du conteneur*/
+    justify-content: flex-end;/*justifie entre et autour des éléments dans le conteneur / éléments flexibles groupés à la fin*/
+    flex-wrap: wrap;/*En fonction de la redimension de la page mes liens vont à ligne de manière liénaire au lieu de suivre le logo vers la gauche de la page*/
+}
+
+nav a{
+    padding: 2rem;/*padding de 2 partout pour les liens dans nav*/
+    border-top: 3px solid transparent;/*bordure haute des menus transparents à l'affichage*/
+}
+nav a:hover{/*hover pour survolage */
+    border-top: 3px solid blue;/*bordure haute devient bleu au survolage des menus en haut
+}
+
+
+
+.Hébergements {/*.la classe que j'ai créer dans mon fichier index.html pour modifier l'aspect visuel de l'élément en question*/
+    font-weight: color: black;/*mettre en gras avec la couleur bleu du cahier des charges*/
+    
+}
+
+.Activités {/*même procédé que pour le .Hébergements*/
+    font-weight: color: black;/*même procédé que pour le .Hébergements*/
+}
+
+.Hébergements:hover{/*hover = spécifie l'apparrence de l'élément ou l'utilisateur survole avec le pointeur sans l'activer*/
+    border-top: 3px solid;color: #0065fc;/*coloriage bleu épaisseur 3 pixels côté du haut*/
+}
+
+.Activités:hover{/*hover = spécifie l'apparrence de l'élément ou l'utilisateur survole avec le pointeur sans l'activer*/
+    border-top: 3px solid;color: #0065fc;/*coloriage bleu épaisseur 3 pixels côté du haut*/
+}
+
+@media (max-width: 800px)/*c'est une media queries qui réagit quand on entre sur un écran au dessous de 800px*/
+{
+    .sub-nav{
+        flex-basis: 100%;/* 100% de flexibilité sur la taille des menus en taille 800px ou moins*/
+    }
+
+
+.sub-nav{
+    display: flex;/*discord*/
+    }
+    
+    
+    .sub-nav a{
+        flex-basis: 50%;/*flexibilité 50% pour les deux menus remplissent la moitié d'un écran 800 px ou moins*/
+        text-align: center;/*aligner le texte et centrer*/
+       
+    }
+    
+    .sub-nav a:hover{/*menu 800px ou moins survolage*/
+        color: blue;/*survolage afficher en bleu*/
+        border-top: 3px solid transparent;/*bordure haute transparente */
+        border-bottom: 3px solid blue;/*bordure basse bleu */
+    }
+    .sub-nav a{
+        border-bottom: 3px solid lightgrey;/*bordure basse grise*/
+        }
+}
+.sub-nav a{
+    flex-basis: 50%;/*flexibilité 50% pour les deux menus remplissent la moitié d'un écran 800 px ou moins*/
+    text-align: center;/*aligner le texte et centrer*/
+   
+}
